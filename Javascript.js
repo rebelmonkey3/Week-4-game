@@ -45,13 +45,15 @@ function gemValues(){
 };
  //Green Gem
 	function addValueG(){
-	score + gameObject.greenGem;
+	(score + gameObject.greenGem).push(score)
 	return score;
 	}
-
-		$("#greenGemIcon").on("click",function(){
-			addValueG(+ score)
-		})
+		// // pop score
+		// $("#greenGemIcon").on("click",function(){
+		// 	$('#score').text('gameObject.greenGem' + score);
+		
+		// 	console.log(score)
+		// })
 
 //Red Gem
 
@@ -60,30 +62,38 @@ function gemValues(){
 	return score;
 	}
 
+
+		//working function
 		$("#redGemIcon").on("click",function(){
+			score=(gameObject.redGem + score)
 			addValueR(+ score)
+			console.log(score)
 		})
 
 //Yellow Gem
 
 	function addValueY(){
-	score + gameObject.yellowGem;
+	score = Math.floor(yellowGem + score);
 	return score;
+	console.log(score)
 	}
 
 		$("#yellowGemIcon").on("click",function(){
-			addValueY(+ score)
+			window['yellowGem' + score].append(score)
+			console.log(score)
 		})
 
 
 //Blue Gem
-	function addValueY(){
-	score + gameObject.yellowGem;
+	function addValueB(){
+	score + gameObject.blueGem;
 	return score;
+	console.log(score)
 	}
 
-		$("#yellowGemIcon").on("click",function(){
-			addValueY(+ score)
+		$("#blueGemIcon").on("click",function(){
+			(gameObject[3] + score);
+			console.log(score)
 		})
 
 
