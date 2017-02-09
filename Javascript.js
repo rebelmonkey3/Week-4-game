@@ -43,20 +43,51 @@ function gemValues(){
 	this.gameObject.blueGem = Math.floor((Math.random() * 12) +1);
 		// return this.gameObject.greenGem;
 };
-
-function addValue(){
+ //Green Gem
+	function addValueG(){
 	score + gameObject.greenGem;
-
 	return score;
-}
+	}
 
-	$("#greenGemIcon").on("click",function(){
-	// gameObject.greenGem + score;
-	// return score;
-	addValue()
-	})
+		$("#greenGemIcon").on("click",function(){
+			addValueG(+ score)
+		})
+
+//Red Gem
+
+	function addValueR(){
+	score + gameObject.redGem;
+	return score;
+	}
+
+		$("#redGemIcon").on("click",function(){
+			addValueR(+ score)
+		})
+
+//Yellow Gem
+
+	function addValueY(){
+	score + gameObject.yellowGem;
+	return score;
+	}
+
+		$("#yellowGemIcon").on("click",function(){
+			addValueY(+ score)
+		})
 
 
+//Blue Gem
+	function addValueY(){
+	score + gameObject.yellowGem;
+	return score;
+	}
+
+		$("#yellowGemIcon").on("click",function(){
+			addValueY(+ score)
+		})
+
+
+//Logging for testing
 gemValues()
 guessNumber()
 
